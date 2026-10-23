@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Registration</title><link rel="stylesheet" href="style.css"></head>
+<body><main class="container narrow"><a href="index.php">← All students</a><section class="panel">
+<h1>Student registration</h1><p>Complete all required fields.</p>
+<form id="registrationForm" method="post" action="create.php" enctype="multipart/form-data" novalidate>
+<label for="name">Full name</label><input id="name" name="name" required maxlength="100" autocomplete="name">
+<label for="roll_number">Roll number</label><input id="roll_number" name="roll_number" required maxlength="40">
+<label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email">
+<label for="course">Course</label><input id="course" name="course" required maxlength="100">
+<label for="password">Password (minimum 8 characters)</label><input id="password" name="password" type="password" required minlength="8" autocomplete="new-password">
+<label for="files">Profile image or document (optional)</label><input id="files" name="files[]" type="file" multiple accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+<p class="hint">Allowed: JPG, PNG, PDF, DOC, DOCX. Maximum 5 MB per file.</p>
+<p id="formError" class="error" role="alert"></p><button class="button" type="submit">Create student</button>
+</form></section></main><script src="validation.js"></script></body></html>
